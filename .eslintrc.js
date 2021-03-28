@@ -309,6 +309,9 @@ module.exports = {
         // Others disabled
         '@typescript-eslint/lines-between-class-members': 0, // classes become too bloated
         '@typescript-eslint/no-parameter-properties': 0, // contradicts angular DI system
+        '@typescript-eslint/no-namespace': 0, // for NgXS actions
+        '@typescript-eslint/unbound-method': 0, // for NgXS getters
+        'max-classes-per-file': 0, // for NgXS action types
         'import/prefer-default-export': 0, // comes from airbnb/base, doesn't suite angular well
         'no-redeclare': 0, // covered by @typescript-eslint/no-redeclare
       },

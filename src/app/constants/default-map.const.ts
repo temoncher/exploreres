@@ -1,17 +1,11 @@
+import { Placement } from '@/models/placement.interface';
+
 import { TileType } from '../enums/tile-type.enum';
 
-export const defaultMap: TileType[][] = [
-  /* eslint-disable array-element-newline */
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  /* eslint-enable array-element-newline */
-] as any as TileType[][];
+export const DEFAULT_GRID_SIZE = 11;
+
+export const initialPlacement: Placement = {
+  type: TileType.MOUNTAIN,
+  // eslint-disable-next-line array-element-newline
+  tiles: [14, 30, 60, 90, 106],
+};

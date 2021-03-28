@@ -1,1 +1,25 @@
-<p>board-view works!</p>
+<div class="tiles">
+  <div
+    *ngFor="let tile of (tileMap$ | async)?.tiles; let index = index"
+    [ngStyle]="{
+      flexBasis: 100 / ((gridSize$ | async) || DEFAULT_GRID_SIZE) + '%'
+    }"
+    class="tile"
+    [class.tile--pad-left]="tile.borders.left"
+    [class.tile--pad-top]="tile.borders.top"
+    [class.tile--pad-right]="tile.borders.right"
+    [class.tile--pad-bottom]="tile.borders.bottom"
+    (click)="log(index)"
+  >
+    <div
+      [ngStyle]="{
+        color: 'white',
+        backgroundColor: colorMap[tile.type],
+        borderColor: 'white'
+      }"
+      class="tile-inner"
+    >
+      {{ tile.type }}
+    </div>
+  </div>
+</div>
