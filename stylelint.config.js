@@ -81,7 +81,7 @@ module.exports = {
     'selector-pseudo-element-colon-notation': 'double',
     'selector-type-no-unknown': true,
     'shorthand-property-no-redundant-values': true,
-    'string-quotes': 'single',
+    'string-quotes': 'double',
     'unit-case': 'lower',
     'value-list-comma-newline-after': 'always-multi-line',
     'value-list-comma-newline-before': 'never-multi-line',
